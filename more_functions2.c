@@ -93,7 +93,7 @@ int print_d(int input, int fd)
  *
  * Return: success
  */
-char *convert_number(long int num, int base, int flags)
+char *convert_number(long int num, int b, int flags)
 {
 	static char *array;
 	static char buffer[50];
