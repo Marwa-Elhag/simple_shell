@@ -79,7 +79,7 @@ int replace_alias(info_t *info)
 {
 	int i;
 	list_t *node;
-	cahr *p;
+	char *p;
 
 	for (i = 0; i < 10; i++)
 	{
@@ -130,9 +130,9 @@ int replace_vars(info_t *info)
 		if (node)
 		{
 			replace_string(&(info->argv[i]),
-					_strdup(_strchr(node(node->str, '=') + 1));
-
-					}
+					_strdup(_strchr(node->str, '=') + 1));
+			continue;
+		}
 		replace_string(&info->argv[i], _strdup(""));
 
 		}

@@ -145,7 +145,7 @@ int _putchar(char);
 /* string_functions3.c */
 char *_strncpy(char *, char *, int);
 char *_strncat(char *, char *, int);
-char *_strnchr(char *, char);
+char *_strche(char *, char);
 
 /* string_functions4.c */
 char **strtow(char *, char *);
@@ -154,7 +154,7 @@ char **strtow2(char *, char);
 /* memory_functions */
 char *_memset(char *, char, unsigned int);
 void ffree(char **);
-void *realloc(void *, unsigned int, unsigned int);
+void *_realloc(void *, unsigned int, unsigned int);
 
 /* memory_functions2.c */
 int bfree(void **);
@@ -175,7 +175,7 @@ void remove_comments(char *);
 /* builtin_emulators.c */
 int _myexit(info_t *);
 int _mycd(info_t *);
-int _myhelp(info_t);
+int _myhelp(info_t *);
 
 /* builtin_emulators2.c */
 int _myhistory(info_t *);

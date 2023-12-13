@@ -38,16 +38,16 @@ int _myexit(info_t *info)
 int _mycd(info_t *info)
 {
 	char *s, *dir, buffer[1024];
-	int chair_ret;
+	int chdir_ret;
 
 	s = getcwd(buffer, 1024);
 	if (!s)
 		_puts("TODO: >>getcwd failure emsg here<<\n");
-	if (!info->[1])
+	if (!info->argv[1])
 	{
 		dir = _getenv(info, "HOME");
 		if (!dir)
-			chdir_ret = chdir((die = _getenv(info, "PWD=")) ? dir : "/");
+			chdir_ret = chdir((dir = _getenv(info, "PWD=")) ? dir : "/");
 		else
 			chdir_ret = chdir(dir);
 	}
@@ -67,7 +67,7 @@ int _mycd(info_t *info)
 	if (chdir_ret == -1)
 	{
 		print_error(info, "can't cd to ");
-		_puts(info->argv[1]), _eputchar('\n')
+		_puts(info->argv[1]), _eputchar('\n');
 	}
 	else
 	{
