@@ -20,7 +20,7 @@ char **get_environ(info_t *info)
 /**
  * _unsetenv - to remove environment
  * @info: structure
- *
+ * @var: string var property
  * Return: success
  *
  */

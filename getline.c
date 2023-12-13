@@ -25,14 +25,14 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 #endif
 		if (r > 0)
 		{
-			if ((*bur)[r - 1] == '\n')
+			if ((*buf)[r - 1] == '\n')
 			{
 				(*buf)[r - 1] = '\0';
 				r--;
 			}
 			info->linecount_flag = 1;
 			remove_comments(*buf);
-			build_history_list(list, *buf, info->histcount++);
+			build_history_list(info, *buf, info->histcount++);
 			/*if (_strchr(*buf, ';')) is this a command chain */
 			{
 				*len = r;
@@ -116,7 +116,7 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
  *
  * Return: success
  */
-int _getline(info_t *info, char *ptr, size_t *length)
+int _getline(info_t *info, char **ptr, size_t *length)
 {
 	static char buf[READ_BUF_SIZE];
 	static size_t i, len;

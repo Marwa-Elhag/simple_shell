@@ -104,7 +104,7 @@ void find_cmd(info_t *info)
 	if (path)
 	{
 		info->path = path;
-		frok_cmd(info);
+		fork_cmd(info);
 	}
 	else
 	{

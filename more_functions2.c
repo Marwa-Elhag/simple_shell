@@ -88,12 +88,12 @@ int print_d(int input, int fd)
 /**
  * convert_number - to convert function
  * @num: number
- * @b: base
+ * @base: base
  * @flags: flags
  *
  * Return: success
  */
-char *convert_number(long int num, int b, int flags)
+char *convert_number(long int num, int base, int flags)
 {
 	static char *array;
 	static char buffer[50];

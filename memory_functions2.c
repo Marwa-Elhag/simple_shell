@@ -6,7 +6,7 @@
  *
  * Return: Success
  */
-int bfree(void ***ptr)
+int bfree(void **ptr)
 {
 	if (ptr && **ptr)
 	{

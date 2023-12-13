@@ -145,7 +145,7 @@ int _putchar(char);
 /* string_functions3.c */
 char *_strncpy(char *, char *, int);
 char *_strncat(char *, char *, int);
-char *_strche(char *, char);
+char *_strchr(char *, char);
 
 /* string_functions4.c */
 char **strtow(char *, char *);
