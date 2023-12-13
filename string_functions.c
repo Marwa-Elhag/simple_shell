@@ -41,13 +41,13 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- * _starts_with - check needle
+ * starts_with - check needle
  * @haystack: to search
  * @needle: to find
  *
  * Return: success
  */
-char *_starts_with(const char *haystack, const char *needle)
+char *starts_with(const char *haystack, const char *needle)
 {
 	while (*needle)
 		if (*needle++ != *haystack++)
