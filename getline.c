@@ -13,11 +13,11 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 	ssize_t r = 0;
 	size_t len_p = 0;
 
-	if (!*len)
+	if (!*len) /* if nothing left in buffer, fiil it */
 	{
 		free(*buf);
 		*buf = NULL;
-		signal(SIGINT, siginHandler);
+		signal(SIGINT, sigintHandler);
 #if USE_GETLINE
 		r = getline(buf, &len_p, stdin);
 #else
